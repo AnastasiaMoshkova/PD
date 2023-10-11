@@ -11,12 +11,11 @@ def video_to_openface(path):
                 if (file.split('_')[0] in ['p2','p3','p5','p11']):
                     listAU.append(file)
 
-
     for i in range(len(listAU)):
        subprocess.run('FeatureExtraction.exe -f ' + path + listAU[i] + ' -out_dir ' + path  + ' -aus')
 
 basepath = 'C:\\Users\\Asus\\Desktop\\Patient\\patient'
-for i in ['44']:
+for i in ['44','45']:
     path = basepath+i+'\\'+ 'face'+'\\'
     video_to_openface(path)
 
