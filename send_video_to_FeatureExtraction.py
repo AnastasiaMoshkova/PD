@@ -15,8 +15,8 @@ def video_to_openface(path):
     for i in range(len(listAU)):
        subprocess.run('FeatureExtraction.exe -f ' + path + listAU[i] + ' -out_dir ' + path  + ' -aus')
 
-
+basepath = 'C:\\Users\\Asus\\Desktop\\Patient\\patient'
 for i in ['44']:
-    path='C:\\Users\\Asus\\Desktop\\Patient\\patient'+i+'\\'+ 'face'+'\\'
+    path = basepath+i+'\\'+ 'face'+'\\'
     video_to_openface(path)
 
