@@ -73,7 +73,7 @@ def faceImage(path):
                 video_to_frames(path + file, folder_frame, 5)
                 # print(folder_frame,file)
             if file.split('_')[0] == 'p1':
-                folder_frame = path + '\\p1'
+                folder_frame = path + 'p1'
                 os.mkdir(folder_frame)
                 video_to_frames(path + file, folder_frame, 60)
                 # print(folder_frame,file)
@@ -240,11 +240,11 @@ def LMJson(path):
             f.close()
 
 
-basepath = 'C:\\Users\\Asus\\Desktop\\Patient\\'
+basepath = 'C:\\Users\\Asus\\Desktop\\Parkinson\\Patient\\'
 path_to_openface = 'C:\\Users\\Asus\\Desktop\\Parkinson\\OpenFace_2.2.0_win_x64'
 path_to_RecordPlaybackSample = 'C:\\Users\\Asus\\Desktop\\Parkinson\\lmt'
 
-for i in ['41', '43']:
+for i in [ '57', '58']:
     path = basepath + 'patient' + i + '\\'
     rename_face_files(path)
     video_to_FeatureExtraction(path, path_to_openface)
